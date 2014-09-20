@@ -7,17 +7,30 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
+    
+    @IBOutlet var qwertSlide: UIProgressView!
+    @IBOutlet var qwert: UILabel!
+    
+    let locationManager:CLLocationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        locationManager.delegate = self
+        locationManager.startUpdatingHeading()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func locationManager(manager: CLLocationManager!, didUpdateHeading newHeading:
+        CLHeading!) {
+        let magnitude:Double = sqrt(pow(newHeading.x, 2) + pow(newHeading.y, 2) + pow(newHeading.z, 2));
+        //qwert.text = toString(magnitude)
+        qwert.text = NSString(format: "%.2F", magnitude) //toString(magnitude)
+        
+        let maxMagnitude = 1500
+        let magnitudeRatio:Float = Float(magnitude) / Float(maxMagnitude)
+         qwertSlide.progress =  magnitudeRatio
     }
 
 

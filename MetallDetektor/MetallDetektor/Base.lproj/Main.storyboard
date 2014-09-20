@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MetallDetektor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,37 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="I will be updated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkg-I3-3l4">
+                                <rect key="frame" x="237" y="246" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Hr-b2-bl9">
+                                <rect key="frame" x="225" y="299" width="150" height="2"/>
+                            </progressView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="fkg-I3-3l4" secondAttribute="centerX" id="8qX-TR-T3A"/>
+                            <constraint firstAttribute="centerY" secondItem="8Hr-b2-bl9" secondAttribute="centerY" id="E7f-uS-ha1"/>
+                            <constraint firstAttribute="centerX" secondItem="8Hr-b2-bl9" secondAttribute="centerX" id="EHQ-pS-Clo"/>
+                            <constraint firstAttribute="centerX" secondItem="fkg-I3-3l4" secondAttribute="centerX" id="Jyw-dC-mdK"/>
+                            <constraint firstAttribute="centerX" secondItem="fkg-I3-3l4" secondAttribute="centerX" id="V7Z-fP-zhR"/>
+                            <constraint firstAttribute="centerX" secondItem="fkg-I3-3l4" secondAttribute="centerX" id="rt1-yO-emZ"/>
+                            <constraint firstAttribute="centerX" secondItem="fkg-I3-3l4" secondAttribute="centerX" id="tR9-fo-Uj0"/>
+                            <constraint firstAttribute="centerX" secondItem="fkg-I3-3l4" secondAttribute="centerX" id="vRX-6f-VKH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="qwert" destination="fkg-I3-3l4" id="UVX-xI-e8e"/>
+                        <outlet property="qwertSlide" destination="8Hr-b2-bl9" id="Fkx-ZL-swC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="105" y="174"/>
         </scene>
     </scenes>
 </document>
