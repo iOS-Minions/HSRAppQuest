@@ -25,12 +25,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager!, didUpdateHeading newHeading:
         CLHeading!) {
         let magnitude:Double = sqrt(pow(newHeading.x, 2) + pow(newHeading.y, 2) + pow(newHeading.z, 2));
+            
         //qwert.text = toString(magnitude)
-        qwert.text = NSString(format: "%.2F", magnitude) //toString(magnitude)
+        qwert.text = NSString(format: "%.2F", magnitude)
         
         let maxMagnitude = 1500
         let magnitudeRatio:Float = Float(magnitude) / Float(maxMagnitude)
-         qwertSlide.progress =  magnitudeRatio
+        qwertSlide.progress =  magnitudeRatio
+            
+        // show color
+        
     }
 
 

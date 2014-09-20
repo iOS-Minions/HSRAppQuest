@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F8F582D19CDCF2C008B5537 /* Background_Grenn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8F582C19CDCF2C008B5537 /* Background_Grenn.png */; };
 		1FF117DE19CD9DFD00437E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF117DD19CD9DFD00437E9C /* AppDelegate.swift */; };
 		1FF117E019CD9DFD00437E9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF117DF19CD9DFD00437E9C /* ViewController.swift */; };
 		1FF117E319CD9DFD00437E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF117E119CD9DFD00437E9C /* Main.storyboard */; };
@@ -26,11 +27,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F8F582C19CDCF2C008B5537 /* Background_Grenn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background_Grenn.png; sourceTree = "<group>"; };
 		1FF117D819CD9DFD00437E9C /* MetallDetektor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetallDetektor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF117DC19CD9DFD00437E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF117DD19CD9DFD00437E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FF117DF19CD9DFD00437E9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1FF117E219CD9DFD00437E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FF117E219CD9DFD00437E9C /* Base */ = {isa = PBXFileReference; explicitFileType = image.jpeg; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FF117E419CD9DFD00437E9C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1FF117E719CD9DFD00437E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1FF117ED19CD9DFD00437E9C /* MetallDetektorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetallDetektorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 		1FF117DB19CD9DFD00437E9C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F8F582C19CDCF2C008B5537 /* Background_Grenn.png */,
 				1FF117DC19CD9DFD00437E9C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F8F582D19CDCF2C008B5537 /* Background_Grenn.png in Resources */,
 				1FF117E319CD9DFD00437E9C /* Main.storyboard in Resources */,
 				1FF117E819CD9DFD00437E9C /* LaunchScreen.xib in Resources */,
 				1FF117E519CD9DFD00437E9C /* Images.xcassets in Resources */,
@@ -405,6 +409,7 @@
 				1FF117F919CD9DFD00437E9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FF117FA19CD9DFD00437E9C /* Build configuration list for PBXNativeTarget "MetallDetektorTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				1FF117FC19CD9DFD00437E9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
