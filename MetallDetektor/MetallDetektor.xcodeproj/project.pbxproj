@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F8F582D19CDCF2C008B5537 /* Background_Grenn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8F582C19CDCF2C008B5537 /* Background_Grenn.png */; };
+		1FD81E7A19CDD5F800C9B31F /* Background_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FD81E7919CDD5F800C9B31F /* Background_Green.png */; };
+		1FD81E7D19CDE93F00C9B31F /* Background_Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FD81E7B19CDE93F00C9B31F /* Background_Red.png */; };
+		1FD81E8019CDE9CB00C9B31F /* Background_Gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FD81E7F19CDE9CB00C9B31F /* Background_Gray.png */; };
 		1FF117DE19CD9DFD00437E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF117DD19CD9DFD00437E9C /* AppDelegate.swift */; };
 		1FF117E019CD9DFD00437E9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF117DF19CD9DFD00437E9C /* ViewController.swift */; };
 		1FF117E319CD9DFD00437E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF117E119CD9DFD00437E9C /* Main.storyboard */; };
@@ -27,7 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F8F582C19CDCF2C008B5537 /* Background_Grenn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background_Grenn.png; sourceTree = "<group>"; };
+		1FD81E7919CDD5F800C9B31F /* Background_Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background_Green.png; sourceTree = "<group>"; };
+		1FD81E7B19CDE93F00C9B31F /* Background_Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background_Red.png; sourceTree = "<group>"; };
+		1FD81E7F19CDE9CB00C9B31F /* Background_Gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background_Gray.png; sourceTree = "<group>"; };
 		1FF117D819CD9DFD00437E9C /* MetallDetektor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetallDetektor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF117DC19CD9DFD00437E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF117DD19CD9DFD00437E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,9 @@
 			children = (
 				1F8F582C19CDCF2C008B5537 /* Background_Grenn.png */,
 				1FF117DC19CD9DFD00437E9C /* Info.plist */,
+				1FD81E7F19CDE9CB00C9B31F /* Background_Gray.png */,
+				1FD81E7B19CDE93F00C9B31F /* Background_Red.png */,
+				1FD81E7919CDD5F800C9B31F /* Background_Green.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -195,9 +202,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F8F582D19CDCF2C008B5537 /* Background_Grenn.png in Resources */,
+				1FD81E7D19CDE93F00C9B31F /* Background_Red.png in Resources */,
+				1FD81E7A19CDD5F800C9B31F /* Background_Green.png in Resources */,
 				1FF117E319CD9DFD00437E9C /* Main.storyboard in Resources */,
 				1FF117E819CD9DFD00437E9C /* LaunchScreen.xib in Resources */,
+				1FD81E8019CDE9CB00C9B31F /* Background_Gray.png in Resources */,
 				1FF117E519CD9DFD00437E9C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

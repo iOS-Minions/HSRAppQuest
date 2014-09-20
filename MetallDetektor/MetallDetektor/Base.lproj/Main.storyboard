@@ -16,10 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Gray.png" translatesAutoresizingMaskIntoConstraints="NO" id="MAf-lz-5e6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="I will be updated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkg-I3-3l4">
                                 <rect key="frame" x="237" y="246" width="127" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Hr-b2-bl9">
@@ -29,16 +32,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="fkg-I3-3l4" secondAttribute="centerX" id="8qX-TR-T3A"/>
+                            <constraint firstAttribute="centerX" secondItem="MAf-lz-5e6" secondAttribute="centerX" id="9zX-5n-dw1"/>
                             <constraint firstAttribute="centerY" secondItem="8Hr-b2-bl9" secondAttribute="centerY" id="E7f-uS-ha1"/>
                             <constraint firstAttribute="centerX" secondItem="8Hr-b2-bl9" secondAttribute="centerX" id="EHQ-pS-Clo"/>
                             <constraint firstAttribute="centerX" secondItem="fkg-I3-3l4" secondAttribute="centerX" id="Jyw-dC-mdK"/>
                             <constraint firstAttribute="centerX" secondItem="fkg-I3-3l4" secondAttribute="centerX" id="V7Z-fP-zhR"/>
+                            <constraint firstAttribute="centerY" secondItem="MAf-lz-5e6" secondAttribute="centerY" id="VWc-j6-Box"/>
                             <constraint firstAttribute="centerX" secondItem="fkg-I3-3l4" secondAttribute="centerX" id="rt1-yO-emZ"/>
                             <constraint firstAttribute="centerX" secondItem="fkg-I3-3l4" secondAttribute="centerX" id="tR9-fo-Uj0"/>
                             <constraint firstAttribute="centerX" secondItem="fkg-I3-3l4" secondAttribute="centerX" id="vRX-6f-VKH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="background" destination="MAf-lz-5e6" id="vFf-D0-cGR"/>
                         <outlet property="qwert" destination="fkg-I3-3l4" id="UVX-xI-e8e"/>
                         <outlet property="qwertSlide" destination="8Hr-b2-bl9" id="Fkx-ZL-swC"/>
                     </connections>
@@ -48,4 +54,7 @@
             <point key="canvasLocation" x="105" y="174"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background_Gray.png" width="600" height="600"/>
+    </resources>
 </document>

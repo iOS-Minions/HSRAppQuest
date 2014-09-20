@@ -13,6 +13,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var qwertSlide: UIProgressView!
     @IBOutlet var qwert: UILabel!
+    @IBOutlet var background: UIImageView!
     
     let locationManager:CLLocationManager = CLLocationManager()
 
@@ -32,9 +33,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let maxMagnitude = 1500
         let magnitudeRatio:Float = Float(magnitude) / Float(maxMagnitude)
         qwertSlide.progress =  magnitudeRatio
-            
-        // show color
         
+        var showImage = "Background_Gray"
+        if (magnitude > 50){
+            showImage = magnitude > 600 ? "Background_Green" : "Background_Red"
+        }
+        background.image = UIImage(named: showImage)
     }
 
 
