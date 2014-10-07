@@ -11,6 +11,7 @@ import AVFoundation
 
 class PhotoView: UIViewController {
     
+    @IBOutlet var testImageInFront: UIImageView!
     let captureSession = AVCaptureSession()
     var previewLayer : AVCaptureVideoPreviewLayer?
     
@@ -92,8 +93,13 @@ class PhotoView: UIViewController {
         
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.view.layer.addSublayer(previewLayer)
+        bringObjectsInFront()
         previewLayer?.frame = self.view.layer.frame
         captureSession.startRunning()
+    }
+    
+    func bringObjectsInFront() {
+        self.view.bringSubviewToFront(testImageInFront)
     }
     
     /* 
