@@ -16,16 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CC-4Q-BN4">
-                                <rect key="frame" x="277" y="285" width="53" height="30"/>
-                                <state key="normal" title="Kamera">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Gqe-SA-1IC" kind="show" id="BJp-Ux-PE5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAF-m7-kYj">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAF-m7-kYj">
                                 <rect key="frame" x="277" y="323" width="69" height="30"/>
                                 <state key="normal" title="Position 1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,43 +25,26 @@
                                     <action selector="pos1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Z6M-C1-aB1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hay-Zv-ZHl">
+                                <rect key="frame" x="277" y="361" width="69" height="30"/>
+                                <state key="normal" title="Position 2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pos2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="l8L-uK-f2n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="5CC-4Q-BN4" secondAttribute="centerY" id="B8G-7w-dtf"/>
-                            <constraint firstAttribute="centerX" secondItem="5CC-4Q-BN4" secondAttribute="centerX" id="qhm-3v-CfO"/>
+                            <constraint firstAttribute="centerX" secondItem="hAF-m7-kYj" secondAttribute="centerX" id="1Tx-lO-g8u"/>
+                            <constraint firstAttribute="centerX" secondItem="Hay-Zv-ZHl" secondAttribute="centerX" id="b6I-fH-vJv"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="49" y="30"/>
-        </scene>
-        <!--Kamera-->
-        <scene sceneID="Xvc-g5-C1q">
-            <objects>
-                <viewController title="Kamera" id="Gqe-SA-1IC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2jd-f3-Nde"/>
-                        <viewControllerLayoutGuide type="bottom" id="QWN-xy-aXb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iI0-Ba-vma">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8E-Jz-QMh">
-                                <rect key="frame" x="94" y="289" width="32" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y1h-Su-si2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="913" y="30"/>
         </scene>
     </scenes>
 </document>

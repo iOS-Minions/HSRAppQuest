@@ -31,6 +31,10 @@ class ViewController: UIViewController {
                 device.unlockForConfiguration()
             }
         }
+        
+        
+        // captureSession.stopRunning() - friert nur den Bildschirm ein
+        //captureSession.delete
     }
     
     let screenWidth = UIScreen.mainScreen().bounds.size.width
@@ -72,7 +76,7 @@ class ViewController: UIViewController {
         captureSession.startRunning()
     }
     
-    @IBAction func pos1(sender: UIButton) {
+    func getCaptureDevice() {
         
         // Do any additional setup after loading the view, typically from a nib.
         captureSession.sessionPreset = AVCaptureSessionPresetHigh
@@ -94,8 +98,27 @@ class ViewController: UIViewController {
             }
         }
         
+    }
+    
+    @IBAction func pos1(sender: UIButton) {
+        
+        var position = "pos1"
+        
+        // open back camera screen
+        getCaptureDevice()
+        
         
     }
+    
+    @IBAction func pos2(sender: UIButton) {
+        
+        var position = "pos2"
+        
+        // open back camera screen
+        getCaptureDevice()
+        
+    }
+    
     
 }
 
