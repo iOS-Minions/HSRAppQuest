@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
         
         // captureSession.stopRunning() - friert nur den Bildschirm ein
-        //captureSession.delete
+        // captureSession.delete(sender: captureDevice)
     }
     
     let screenWidth = UIScreen.mainScreen().bounds.size.width

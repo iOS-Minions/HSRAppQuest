@@ -34,17 +34,64 @@
                                     <action selector="pos2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="l8L-uK-f2n"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjF-1w-48m">
+                                <rect key="frame" x="277" y="285" width="158" height="30"/>
+                                <state key="normal" title="Test Button für Kamera">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="emg-m4-xgp" kind="show" id="9cw-2n-tXt"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhW-xJ-Lzd">
+                                <rect key="frame" x="-8" y="155" width="616" height="81"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="hAF-m7-kYj" secondAttribute="centerX" id="1Tx-lO-g8u"/>
+                            <constraint firstAttribute="centerX" secondItem="WjF-1w-48m" secondAttribute="centerX" id="JAW-xD-m0O"/>
                             <constraint firstAttribute="centerX" secondItem="Hay-Zv-ZHl" secondAttribute="centerX" id="b6I-fH-vJv"/>
+                            <constraint firstAttribute="centerY" secondItem="WjF-1w-48m" secondAttribute="centerY" id="tLj-Ij-Hur"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="30"/>
+            <point key="canvasLocation" x="-43" y="30"/>
+        </scene>
+        <!--Kamera-->
+        <scene sceneID="zmC-K3-Z0B">
+            <objects>
+                <viewController title="Kamera" id="emg-m4-xgp" customClass="PhotoView" customModule="GroessenMesser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JqB-5J-zqj"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Wm-Qu-Gza"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fFt-Su-Lma">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="etf-Ca-3YH">
+                                <rect key="frame" x="-8" y="145" width="616" height="81"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Zurück" id="Av0-sn-WK4">
+                            <connections>
+                                <segue destination="vXZ-lx-hvc" kind="show" id="iJ8-hk-C2I"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XX8-O6-vOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="30"/>
         </scene>
     </scenes>
 </document>

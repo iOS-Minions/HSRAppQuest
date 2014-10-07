@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1F3AF219E43F7D0066E795 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F3AF119E43F7D0066E795 /* PhotoView.swift */; };
 		1FBB029419D9D08B0063289C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB029319D9D08B0063289C /* AppDelegate.swift */; };
 		1FBB029619D9D08B0063289C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB029519D9D08B0063289C /* ViewController.swift */; };
 		1FBB029919D9D08B0063289C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBB029719D9D08B0063289C /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F1F3AF119E43F7D0066E795 /* PhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		1FBB028E19D9D08B0063289C /* GroessenMesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroessenMesser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBB029219D9D08B0063289C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FBB029319D9D08B0063289C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				1FBB029319D9D08B0063289C /* AppDelegate.swift */,
 				1FBB029519D9D08B0063289C /* ViewController.swift */,
+				1F1F3AF119E43F7D0066E795 /* PhotoView.swift */,
 				1FBB029719D9D08B0063289C /* Main.storyboard */,
 				1FBB029A19D9D08B0063289C /* Images.xcassets */,
 				1FBB029C19D9D08B0063289C /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1F3AF219E43F7D0066E795 /* PhotoView.swift in Sources */,
 				1FBB029619D9D08B0063289C /* ViewController.swift in Sources */,
 				1FBB029419D9D08B0063289C /* AppDelegate.swift in Sources */,
 			);
@@ -405,6 +409,7 @@
 				1FBB02AF19D9D08B0063289C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FBB02B019D9D08B0063289C /* Build configuration list for PBXNativeTarget "GroessenMesserTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				1FBB02B219D9D08B0063289C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
