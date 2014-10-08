@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CoreMotion
 
 class PhotoView: UIViewController {
     
@@ -57,8 +58,9 @@ class PhotoView: UIViewController {
             }
         }
         
-        self.navigationController?.popToRootViewControllerAnimated(true)
-        //self.navigationController?.popViewControllerAnimated(true)
+        // go back
+        //self.navigationController?.popToRootViewControllerAnimated(true)
+        getPosition()
         
     }
     
@@ -108,6 +110,19 @@ class PhotoView: UIViewController {
         self.view.bringSubviewToFront(pointer2)
     }
     
+    func getPosition() {
+        
+        let motionManager = CMMotionManager()
+        motionManager.deviceMotionUpdateInterval = 0.1
+        
+        motionManager.startDeviceMotionUpdatesToQueue(
+            NSOperationQueue.currentQueue(), withHandler: { (motion, error) -> Void in
+                //var pitch = motion.attitude.pitch }
+                println("Pitch: \(motion.attitude.pitch)") }
+        )
+        
+        //var test = pitch
+        
+    }
+    
 }
-
-

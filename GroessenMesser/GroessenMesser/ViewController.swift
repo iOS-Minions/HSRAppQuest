@@ -24,6 +24,13 @@ class ViewController: UIViewController {
         
         var position = "pos1"
         
+        //self.navigationController?.popToViewController(PhotoView(), animated: true)
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var setViewController = mainStoryboard.instantiateViewControllerWithIdentifier("PhotoView") as PhotoView
+        self.navigationController?.popToViewController(setViewController, animated: false)
+
+        
     }
     
     @IBAction func pos2(sender: UIButton) {
@@ -31,6 +38,6 @@ class ViewController: UIViewController {
         var position = "pos2"
         
     }
-    
+
 }
 
