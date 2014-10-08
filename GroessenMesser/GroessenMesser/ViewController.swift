@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     }
     
     
+    
+    //Winkel übergabe
+    
     @IBAction func pos1(sender: UIButton) {
         
         var position = "pos1"
@@ -30,6 +33,8 @@ class ViewController: UIViewController {
         var setViewController = mainStoryboard.instantiateViewControllerWithIdentifier("PhotoView") as PhotoView
         self.navigationController?.popToViewController(setViewController, animated: false)
 
+        
+        
         
     }
     
