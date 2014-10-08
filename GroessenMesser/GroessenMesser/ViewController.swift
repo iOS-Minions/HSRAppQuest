@@ -100,12 +100,18 @@ class ViewController: UIViewController {
         
     }
     
+    
+    //Winkel übergabe
+    
     @IBAction func pos1(sender: UIButton) {
         
         var position = "pos1"
         
+        
         // open back camera screen
         getCaptureDevice()
+        
+        
         
         
     }
@@ -116,6 +122,8 @@ class ViewController: UIViewController {
         
         // open back camera screen
         getCaptureDevice()
+        
+        
         
     }
     
