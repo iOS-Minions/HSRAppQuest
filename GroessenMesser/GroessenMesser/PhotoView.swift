@@ -11,7 +11,11 @@ import AVFoundation
 
 class PhotoView: UIViewController {
     
-    @IBOutlet var testImageInFront: UIImageView!
+    @IBOutlet var pointerBottom: UIImageView!
+    @IBOutlet var pointer1: UIImageView!
+    @IBOutlet var pointer2: UIImageView!
+    
+    
     let captureSession = AVCaptureSession()
     var previewLayer : AVCaptureVideoPreviewLayer?
     
@@ -99,16 +103,10 @@ class PhotoView: UIViewController {
     }
     
     func bringObjectsInFront() {
-        self.view.bringSubviewToFront(testImageInFront)
+        self.view.bringSubviewToFront(pointerBottom)
+        self.view.bringSubviewToFront(pointer1)
+        self.view.bringSubviewToFront(pointer2)
     }
-    
-    /* 
-    @IBAction func unwindFromPhotoView(unwindSegue:UIStoryboardSegue) {
-        let sourceViewController = unwindSegue.sourceViewController as PhotoView
-        firstAngle.text = sourceViewController.firstAngle
-        secondAngle.text = sourceViewController.secondAngle
-    }
-    */
     
 }
 

@@ -13,11 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAF-m7-kYj">
-                                <rect key="frame" x="277" y="323" width="69" height="30"/>
+                                <rect key="frame" x="126" y="322" width="69" height="30"/>
                                 <state key="normal" title="Position 1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -25,17 +25,8 @@
                                     <action selector="pos1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Z6M-C1-aB1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hay-Zv-ZHl">
-                                <rect key="frame" x="277" y="361" width="69" height="30"/>
-                                <state key="normal" title="Position 2">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pos2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="l8L-uK-f2n"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjF-1w-48m">
-                                <rect key="frame" x="277" y="285" width="158" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjF-1w-48m">
+                                <rect key="frame" x="81" y="269" width="158" height="30"/>
                                 <state key="normal" title="Test Button für Kamera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -43,10 +34,15 @@
                                     <segue destination="emg-m4-xgp" kind="show" id="9cw-2n-tXt"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhW-xJ-Lzd">
-                                <rect key="frame" x="-8" y="155" width="616" height="81"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hay-Zv-ZHl">
+                                <rect key="frame" x="126" y="360" width="69" height="30"/>
+                                <state key="normal" title="Position 2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pos2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="l8L-uK-f2n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -57,10 +53,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zl1-W4-Qgx"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769" y="30"/>
+            <point key="canvasLocation" x="1135" y="30"/>
         </scene>
         <!--Kamera-->
         <scene sceneID="zmC-K3-Z0B">
@@ -71,26 +68,31 @@
                         <viewControllerLayoutGuide type="bottom" id="2Wm-Qu-Gza"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fFt-Su-Lma">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="etf-Ca-3YH">
-                                <rect key="frame" x="-8" y="145" width="616" height="81"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="285" width="320" height="8"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NKO-yk-VUK">
+                                <rect key="frame" x="112" y="249" width="1" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kbV-T2-njY">
+                                <rect key="frame" x="203" y="249" width="1" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Zurück" id="Av0-sn-WK4">
-                            <connections>
-                                <segue destination="f9E-kP-sl8" kind="show" id="iJ8-hk-C2I"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="testImageInFront" destination="etf-Ca-3YH" id="o4c-Dk-YN3"/>
+                        <outlet property="pointer1" destination="NKO-yk-VUK" id="WKV-5U-iCA"/>
+                        <outlet property="pointer2" destination="kbV-T2-njY" id="sTQ-0L-eiN"/>
+                        <outlet property="pointerBottom" destination="etf-Ca-3YH" id="7tv-NH-qKQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XX8-O6-vOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,6 +104,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f9E-kP-sl8" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KX1-vX-JdX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -113,7 +116,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xug-y7-iBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="30"/>
+            <point key="canvasLocation" x="667" y="30"/>
         </scene>
     </scenes>
 </document>
