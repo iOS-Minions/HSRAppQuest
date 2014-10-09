@@ -19,9 +19,9 @@ class PhotoView: UIViewController {
     var winkelA = 1.0
     var winkelB = 2.0
     
-    
     let captureSession = AVCaptureSession()
     var previewLayer : AVCaptureVideoPreviewLayer?
+    var delegate:CameraViewControllerDelegate?
     
     // If we find a device we'll store it here for later use
     var captureDevice : AVCaptureDevice?
@@ -145,6 +145,10 @@ class PhotoView: UIViewController {
       
         
     }
-  
+    
+    //Und dann sobald die Messung gemacht wurde:
+    @IBAction func measurementDone(sender: UIButton) {
+        delegate?.camViewControllerDidMeasureAngles(self, first: winkelA, second: winkelB)
+    }
     
 }

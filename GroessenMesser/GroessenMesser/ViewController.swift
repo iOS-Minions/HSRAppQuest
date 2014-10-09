@@ -9,7 +9,11 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+protocol CameraViewControllerDelegate {
+    func camViewControllerDidMeasureAngles(controller:PhotoView,first:Double,second:Double);
+}
+
+class ViewController: UIViewController, CameraViewControllerDelegate {
     
     var previewLayer : AVCaptureVideoPreviewLayer?
 
@@ -23,6 +27,15 @@ class ViewController: UIViewController {
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationViewController = segue.destinationViewController as PhotoView
+        destinationViewController.delegate = self
+    }
+    
+    func camViewControllerDidMeasureAngles(controller: PhotoView, first: Double, second: Double) {
+        //TODO update UI
+        winkelA.text = toString(12.012)
+    }
     
     @IBAction func pos1(sender: UIButton) {
         
