@@ -16,8 +16,9 @@ class PhotoView: UIViewController {
     @IBOutlet var pointer1: UIImageView!
     @IBOutlet var pointer2: UIImageView!
     
-    var winkelA = 1.0
-    var winkelB = 2.0
+    var winkelA = 361.0
+    var winkelB = 361.0
+    var currentMotion = 361.0
     
     let captureSession = AVCaptureSession()
     var previewLayer : AVCaptureVideoPreviewLayer?
@@ -54,22 +55,24 @@ class PhotoView: UIViewController {
             }
         }
         
-        println("test")
-        
             
         motionManager.deviceMotionUpdateInterval = 0.1
         motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.currentQueue(), withHandler: { (motion, error) -> Void in
             let interfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
             if UIInterfaceOrientationIsPortrait(interfaceOrientation) {
-                self.winkelA = self.radiansToDegree(motion.attitude.pitch)
+                // horizontales wenden
+                self.currentMotion = self.radiansToDegree(motion.attitude.pitch)
             } else {
-                self.winkelA = 5 //TODO
+                // Querformat wird eig nicht von der App unterstützt aber falls das ändert:
+                self.currentMotion = self.radiansToDegree(motion.attitude.roll)
             }
                 
-                //TODO
+                println("hallo1 \(self.currentMotion)")
+            // der Wendepunkt startet bei 90c - senkrechtes handy
+            // kippt man es zurück, gehen die Zahlen zurück
+            
+            // self.currentMotion = 180 - self.currentMotion
         })
-    
-        println("hallo \(self.winkelA)")
      
     }
     
@@ -90,7 +93,6 @@ class PhotoView: UIViewController {
         // go back
         delegate?.camViewControllerDidMeasureAngles(self, first: winkelA, second: winkelB)
         self.navigationController?.popToRootViewControllerAnimated(true)
-        getPosition()
         
     }
     
@@ -138,13 +140,6 @@ class PhotoView: UIViewController {
         self.view.bringSubviewToFront(pointerBottom)
         self.view.bringSubviewToFront(pointer1)
         self.view.bringSubviewToFront(pointer2)
-    }
-    
-    func getPosition() {
-        
-        println("test2")
-      
-        
     }
     
     //Und dann sobald die Messung gemacht wurde:
