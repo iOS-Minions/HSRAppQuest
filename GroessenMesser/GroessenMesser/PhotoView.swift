@@ -46,6 +46,19 @@ class PhotoView: UIViewController {
             }
         }
         
+        println("test")
+        
+        let motionManager = CMMotionManager()
+        motionManager.deviceMotionUpdateInterval = 0.1
+        
+        motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.currentQueue(),
+            withHandler: {
+                (motion, error) -> Void in
+                //var pitch = motion.attitude.pitch }
+                println("Pitch: \(motion.attitude.pitch)")
+            })
+        
+     
     }
     
     func focusTo(value : Float) {
@@ -111,6 +124,8 @@ class PhotoView: UIViewController {
     }
     
     func getPosition() {
+        
+        println("test2")
         
         let motionManager = CMMotionManager()
         motionManager.deviceMotionUpdateInterval = 0.1
