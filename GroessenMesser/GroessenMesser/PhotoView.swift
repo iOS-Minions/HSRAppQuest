@@ -16,6 +16,7 @@ class PhotoView: UIViewController {
     @IBOutlet var pointer1: UIImageView!
     @IBOutlet var pointer2: UIImageView!
     
+    
     var winkelA = 361.0
     var winkelB = 361.0
     var currentMotion = 361.0
@@ -66,12 +67,21 @@ class PhotoView: UIViewController {
                 // Querformat wird eig nicht von der App unterstützt aber falls das ändert:
                 self.currentMotion = self.radiansToDegree(motion.attitude.roll)
             }
-                
-                println("hallo1 \(self.currentMotion)")
+            
+            println("hallo1 \(self.currentMotion)")
             // der Wendepunkt startet bei 90c - senkrechtes handy
             // kippt man es zurück, gehen die Zahlen zurück
             
-            // self.currentMotion = 180 - self.currentMotion
+            // iPhone ist geneigt nach vorne
+            var roll = self.radiansToDegree(motion.attitude.roll)
+            if ((roll < 60) && (roll > -60)){
+                
+            } else {
+                self.currentMotion = 180 + self.currentMotion
+            }
+            // die opere Kante ist also die grössere Zahl
+            // die Rechnung ergibt "oben - unten = winkel a"
+            
         })
      
     }
@@ -90,9 +100,7 @@ class PhotoView: UIViewController {
             }
         }
         
-        // go back
-        delegate?.camViewControllerDidMeasureAngles(self, first: winkelA, second: winkelB)
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        takeData()
         
     }
     
@@ -144,7 +152,24 @@ class PhotoView: UIViewController {
     
     //Und dann sobald die Messung gemacht wurde:
     @IBAction func measurementDone(sender: UIButton) {
-        delegate?.camViewControllerDidMeasureAngles(self, first: winkelA, second: winkelB)
+        var winkelBeta = winkelA - winkelB
+        delegate?.camViewControllerDidMeasureAngles(self, beta: winkelBeta)
+    }
+    
+    func takeData() {
+        
+        if (winkelA < 361) {
+            winkelB = currentMotion
+        } else {
+            winkelA = currentMotion
+        }
+        
+        if (winkelA < 361 && winkelB < 361) {
+            var winkelBeta = winkelA - winkelB
+            delegate?.camViewControllerDidMeasureAngles(self, beta: winkelBeta)
+            // go back
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
     }
     
 }

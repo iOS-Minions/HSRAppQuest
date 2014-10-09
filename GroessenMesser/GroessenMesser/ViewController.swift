@@ -10,12 +10,17 @@ import UIKit
 import AVFoundation
 
 protocol CameraViewControllerDelegate {
-    func camViewControllerDidMeasureAngles(controller:PhotoView,first:Double,second:Double);
+    func camViewControllerDidMeasureAngles(controller:PhotoView,beta:Double);
 }
 
 class ViewController: UIViewController, CameraViewControllerDelegate {
     
     var previewLayer : AVCaptureVideoPreviewLayer?
+    
+    var wA = 0
+    var wB = 0
+    var sA = 0
+    var sB = 0
 
     @IBOutlet var winkelA: UITextField!
     @IBOutlet var winkelB: UITextField!
@@ -32,9 +37,14 @@ class ViewController: UIViewController, CameraViewControllerDelegate {
         destinationViewController.delegate = self
     }
     
-    func camViewControllerDidMeasureAngles(controller: PhotoView, first: Double, second: Double) {
+    func camViewControllerDidMeasureAngles(controller: PhotoView, beta: Double) {
         //TODO update UI
-        winkelA.text = toString(first)
+        wB = Int(beta)
+        winkelB.text = toString(wB)
+    }
+    
+    func rechne() {
+        
     }
     
     @IBAction func pos1(sender: UIButton) {
