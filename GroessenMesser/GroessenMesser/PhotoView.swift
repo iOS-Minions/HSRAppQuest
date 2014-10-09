@@ -26,6 +26,11 @@ class PhotoView: UIViewController {
     // If we find a device we'll store it here for later use
     var captureDevice : AVCaptureDevice?
     
+    
+    
+    let motionManager = CMMotionManager()
+    var currentAngle:Double!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,9 +56,6 @@ class PhotoView: UIViewController {
         
         println("test")
         
-        
-        let motionManager = CMMotionManager()
-        var currentAngle:Double!
             
         motionManager.deviceMotionUpdateInterval = 0.1
         motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.currentQueue(), withHandler: { (motion, error) -> Void in
@@ -68,8 +70,6 @@ class PhotoView: UIViewController {
         })
     
         println("hallo \(self.winkelA)")
-        
-        
      
     }
     
