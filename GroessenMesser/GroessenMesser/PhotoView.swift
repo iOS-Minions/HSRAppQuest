@@ -88,7 +88,8 @@ class PhotoView: UIViewController {
         }
         
         // go back
-        //self.navigationController?.popToRootViewControllerAnimated(true)
+        delegate?.camViewControllerDidMeasureAngles(self, first: winkelA, second: winkelB)
+        self.navigationController?.popToRootViewControllerAnimated(true)
         getPosition()
         
     }

@@ -34,7 +34,7 @@ class ViewController: UIViewController, CameraViewControllerDelegate {
     
     func camViewControllerDidMeasureAngles(controller: PhotoView, first: Double, second: Double) {
         //TODO update UI
-        winkelA.text = toString(12.012)
+        winkelA.text = toString(first)
     }
     
     @IBAction func pos1(sender: UIButton) {
