@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     
     @IBAction func unwindFromPhotoView(unwindSegue:UIStoryboardSegue) {
         let sourceViewController = unwindSegue.sourceViewController as PhotoView
-        winkelA.text = sourceViewController.winkelA
+        winkelA.text = toString(sourceViewController.winkelA)
     }
 
 }

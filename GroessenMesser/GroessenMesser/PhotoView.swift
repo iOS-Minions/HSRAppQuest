@@ -16,8 +16,8 @@ class PhotoView: UIViewController {
     @IBOutlet var pointer1: UIImageView!
     @IBOutlet var pointer2: UIImageView!
     
-    var winkelA = "undef"
-    var winkelB = "undef"
+    var winkelA = 1.0
+    var winkelB = 2.0
     
     
     let captureSession = AVCaptureSession()
@@ -51,17 +51,30 @@ class PhotoView: UIViewController {
         
         println("test")
         
-        let motionManager = CMMotionManager()
-        motionManager.deviceMotionUpdateInterval = 0.1
         
-        motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.currentQueue(),
-            withHandler: {
-                (motion, error) -> Void in
-                //var pitch = motion.attitude.pitch }
-                println("Pitch: \(motion.attitude.pitch)")
-            })
+        let motionManager = CMMotionManager()
+        var currentAngle:Double!
+            
+        motionManager.deviceMotionUpdateInterval = 0.1
+        motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.currentQueue(), withHandler: { (motion, error) -> Void in
+            let interfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
+            if UIInterfaceOrientationIsPortrait(interfaceOrientation) {
+                self.winkelA = self.radiansToDegree(motion.attitude.pitch)
+            } else {
+                self.winkelA = 5 //TODO
+            }
+                
+                //TODO
+        })
+    
+        println("hallo \(self.winkelA)")
+        
         
      
+    }
+    
+    func radiansToDegree(radians:Double) -> Double {
+        return radians * 180 / M_PI
     }
     
     func focusTo(value : Float) {
@@ -129,17 +142,7 @@ class PhotoView: UIViewController {
     func getPosition() {
         
         println("test2")
-        
-        let motionManager = CMMotionManager()
-        motionManager.deviceMotionUpdateInterval = 0.1
-        
-        motionManager.startDeviceMotionUpdatesToQueue(
-            NSOperationQueue.currentQueue(), withHandler: { (motion, error) -> Void in
-                //var pitch = motion.attitude.pitch }
-                println("Pitch: \(motion.attitude.pitch)") }
-        )
-        
-        //var test = pitch
+      
         
     }
   

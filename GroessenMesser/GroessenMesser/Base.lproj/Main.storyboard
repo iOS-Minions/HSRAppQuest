@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f9E-kP-sl8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home-->
@@ -25,7 +26,7 @@
                                     <action selector="pos1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Z6M-C1-aB1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjF-1w-48m">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjF-1w-48m">
                                 <rect key="frame" x="81" y="434" width="158" height="30"/>
                                 <state key="normal" title="Test Button für Kamera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,9 +44,6 @@
                                     <action selector="pos2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="l8L-uK-f2n"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="groessenmesser.png" translatesAutoresizingMaskIntoConstraints="NO" id="mQy-5a-QRw">
-                                <rect key="frame" x="0.0" y="64" width="329" height="178"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="a (cm)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrE-nd-Fsa">
                                 <rect key="frame" x="81" y="334" width="47" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -58,13 +56,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winkel α" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNg-Ev-vIY">
+                                <rect key="frame" x="71" y="258" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winkel β" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bl2-SF-50O">
                                 <rect key="frame" x="71" y="296" width="66" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q7b-dd-wLd">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q7b-dd-wLd">
                                 <rect key="frame" x="179" y="254" width="60" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -84,19 +88,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winkel α" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNg-Ev-vIY">
-                                <rect key="frame" x="71" y="258" width="66" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="groessenmesser.png" translatesAutoresizingMaskIntoConstraints="NO" id="mQy-5a-QRw">
+                                <rect key="frame" x="0.0" y="64" width="270" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="182" id="5dv-fC-NCw"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="hAF-m7-kYj" secondAttribute="centerX" id="1Tx-lO-g8u"/>
+                            <constraint firstItem="q7b-dd-wLd" firstAttribute="top" secondItem="mQy-5a-QRw" secondAttribute="bottom" constant="8" symbolic="YES" id="A5U-PC-NsM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mQy-5a-QRw" secondAttribute="trailing" constant="-25" id="EyU-9o-bZW"/>
                             <constraint firstAttribute="centerX" secondItem="WjF-1w-48m" secondAttribute="centerX" id="JAW-xD-m0O"/>
+                            <constraint firstItem="mQy-5a-QRw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="JT0-VW-xUm"/>
+                            <constraint firstAttribute="centerX" secondItem="mQy-5a-QRw" secondAttribute="centerX" id="Qpt-m0-2L2"/>
                             <constraint firstAttribute="centerX" secondItem="Hay-Zv-ZHl" secondAttribute="centerX" id="b6I-fH-vJv"/>
-                            <constraint firstAttribute="centerY" secondItem="WjF-1w-48m" secondAttribute="centerY" id="tLj-Ij-Hur"/>
+                            <constraint firstItem="mQy-5a-QRw" firstAttribute="leading" secondItem="jyV-Pf-zRb" secondAttribute="leading" id="ofz-VX-sLZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zl1-W4-Qgx"/>
