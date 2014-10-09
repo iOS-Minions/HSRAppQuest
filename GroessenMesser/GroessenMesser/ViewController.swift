@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     
     var previewLayer : AVCaptureVideoPreviewLayer?
 
+    @IBOutlet var winkelA: UITextField!
+    @IBOutlet var winkelB: UITextField!
+    @IBOutlet var streckeA: UITextField!
+    @IBOutlet var streckeB: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +41,12 @@ class ViewController: UIViewController {
         
         var position = "pos2"
         
+    }
+    
+    
+    @IBAction func unwindFromPhotoView(unwindSegue:UIStoryboardSegue) {
+        let sourceViewController = unwindSegue.sourceViewController as PhotoView
+        winkelA.text = sourceViewController.winkelA
     }
 
 }

@@ -14,6 +14,7 @@
 		1FBB029B19D9D08B0063289C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBB029A19D9D08B0063289C /* Images.xcassets */; };
 		1FBB029E19D9D08B0063289C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FBB029C19D9D08B0063289C /* LaunchScreen.xib */; };
 		1FBB02AA19D9D08B0063289C /* GroessenMesserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB02A919D9D08B0063289C /* GroessenMesserTests.swift */; };
+		1FDEC79219E6A89F00EA5A42 /* groessenmesser.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FDEC79119E6A89F00EA5A42 /* groessenmesser.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1FBB02A319D9D08B0063289C /* GroessenMesserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroessenMesserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBB02A819D9D08B0063289C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FBB02A919D9D08B0063289C /* GroessenMesserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroessenMesserTests.swift; sourceTree = "<group>"; };
+		1FDEC79119E6A89F00EA5A42 /* groessenmesser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groessenmesser.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				1FBB029719D9D08B0063289C /* Main.storyboard */,
 				1FBB029A19D9D08B0063289C /* Images.xcassets */,
 				1FBB029C19D9D08B0063289C /* LaunchScreen.xib */,
+				1FDEC79119E6A89F00EA5A42 /* groessenmesser.png */,
 				1FBB029119D9D08B0063289C /* Supporting Files */,
 			);
 			path = GroessenMesser;
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FBB029919D9D08B0063289C /* Main.storyboard in Resources */,
+				1FDEC79219E6A89F00EA5A42 /* groessenmesser.png in Resources */,
 				1FBB029E19D9D08B0063289C /* LaunchScreen.xib in Resources */,
 				1FBB029B19D9D08B0063289C /* Images.xcassets in Resources */,
 			);

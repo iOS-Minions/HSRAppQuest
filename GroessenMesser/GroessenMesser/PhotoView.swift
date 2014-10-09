@@ -16,6 +16,9 @@ class PhotoView: UIViewController {
     @IBOutlet var pointer1: UIImageView!
     @IBOutlet var pointer2: UIImageView!
     
+    var winkelA = "undef"
+    var winkelB = "undef"
+    
     
     let captureSession = AVCaptureSession()
     var previewLayer : AVCaptureVideoPreviewLayer?
@@ -139,5 +142,6 @@ class PhotoView: UIViewController {
         //var test = pitch
         
     }
+  
     
 }
